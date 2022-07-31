@@ -5,14 +5,156 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../public/assets/style.css">
+  <script src="https://kit.fontawesome.com/22dd73ce13.js" crossorigin="anonymous"></script>
+
+  <link href='https://fonts.googleapis.com/css?family=Bebas Neue' rel='stylesheet'>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+
 
   <title>Document</title>
 </head>
 <body>
   <div class="page">
 
-    
+    <div class="contentWrapper">
 
+      <div class="displayMenu showMenuBtn">
+        <div class="displayMenuWrapper">
+          <button>x</button>
+          <img src="../public/assets/imgs/topShowImg1.jpg" alt="">
+          <div class="displayMenuText">
+            <h1>Indiana Jones and the Last Crusade</h1>
+            <span class="released"><span class="bold">Released:</span> 24 May 1989</span>
+            <span class="rated"><span class="bold">Rated:</span> PG-13</span>
+            <span class="genre"><span class="bold">Genre:</span> Action, Adventure</span>
+            <span class="director"><span class="bold">Director:</span> Steven Spielberg</span>
+            <span class="rating"><span class="bold">Rating:</span> 8.2/10 <i class="fa-solid fa-star"></i></span>
+            <p><span class="bold">Plot:</span> Jedi Master-in-hiding Luke Skywalker unwillingly attempts to guide young hopeful Rey in the ways of the force, while Leia, former princess turned general, attempts to lead what is left of the Resistance away from the ruthless tyrannical grip of the First Order.</p>
+          </div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <div class="navWrapper">
+          <h1>Mo<span>vies</span></h1>
+          <div class="navCtrls">
+            <ul>
+              <a href="#"><li>Home</li></a>
+              <a href="#"><li>Movies</li></a>
+              <a href="#"><li>TV Shows</li></a>
+              <a href="#"><li>Contact</li></a>
+            </ul>
+            <div class="navSearch">
+              <input type="text" placeholder="Name">
+              <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="header">
+        <div class="swiper headerSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="../public/assets/imgs/moviecover.jpg" alt="">
+              <div class="headerText">
+                <h1>Dark</h1>
+                <span>When two children go missing in a small German town, its sinful past is exposed along with the double lives and fractured relationships that exist among four families as they search for the kids </span>
+                <button>More Info</button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="../public/assets/imgs/largeimg.webp" alt="">
+              <div class="headerText">
+                <h1>Title</h1>
+                <span>Desc</span>
+                <button>More Info</button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="../public/assets/imgs/moviecover2.jpg" alt="">
+              <div class="headerText">
+                <h1>Title</h1>
+                <span>Desc</span>
+                <button>More Info</button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="../public/assets/imgs/mociecover3.jpg" alt="">
+              <div class="headerText">
+                <h1>Title</h1>
+                <span>Desc</span>
+                <button>More Info</button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="../public/assets/imgs/moviecover5.webp" alt="">
+              <div class="headerText">
+                <h1>Title</h1>
+                <span>Desc</span>
+                <button>More Info</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="mainContent">
+        <div class="mcTopMovies">
+          <h1 class="catTtitle">Top <span class="number">10</span> Trending Movies</h1>
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <% movies.forEach((x,i) => { %>
+                <div class="swiper-slide">
+                  <div class="mcTopMoviesFront">
+                    <img src="<%= x.Poster %>" alt="">
+                    <span class="rank"><%= x.Rank %></span>
+                  </div>
+                  <div class="mcTopMovesBack mcTopMoviesItemText">
+                    <span><%= x.Title %></span>
+                    <p><%= x.MoreInfo.Plot %></p>
+                    <button class="readMore top" value="<%=x.Rank%>">Read More</button>
+                  </div>
+                </div>
+              <% }) %>
+            </div>
+          </div>
+        </div>
+
+        <div class="mcTopShows">
+          <h1 class="catTtitle">Trending <span>Shows</span></h1>
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+
+              <% shows.forEach((x,i) => { %>
+                <div class="swiper-slide">
+                  <div class="mcTopMoviesFront">
+                    <img src="<%= x.Poster %>" alt="">
+                  </div>
+                  <div class="mcTopMovesBack mcTopMoviesItemText">
+                    <span><%= x.Title %></span>
+                    <p><%= x.MoreInfo.Plot %></p>
+                    <button class="readMore bot" value="<%=x.Rank%>">Read More</button>
+                  </div>
+                </div>
+              <% }) %>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
   </div>
+
+  <section style="height: 200vh;">
+
+  </section>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  
+  <script src="../public/assets/JS.js"></script>
 </body>
 </html>

@@ -100,7 +100,7 @@ body{
   background-color: #000000b4;
   backdrop-filter: blur(10px);
   width: 100%;
-  z-index: 100;
+  z-index: 10;
 }
 .navWrapper{
   width: 100%;
@@ -327,7 +327,7 @@ body{
   overflow-y: scroll;
   width: 95%;
 }
-.mcTopMoviesItemText>a{
+.mcTopMoviesItemText button{
   background-color: black;
   border: 1px solid white;
   padding: 10px 20px;
@@ -335,7 +335,7 @@ body{
   color: white;
   cursor: pointer;
 }
-.mcTopMoviesItemText>a:hover{
+.mcTopMoviesItemText button:hover{
   color: red;
   border: 1px solid red;
 }
@@ -349,6 +349,8 @@ body{
   position: relative;
   transition: .35s ease;
   top: 0;
+  min-height: 378px;
+
 }
 .swiper-slide:hover > .mcTopMoviesFront{
   transform: scale(0.35);
@@ -424,11 +426,111 @@ body{
   /* width: 258.333px;
   max-width: 258.333px;
   min-width: 258.333px; */
+  min-height: 378px;
+  max-height: 378px;
+
 }
 
 .mainContent .swiper-slide img {
   display: block;
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   object-fit: cover;
+}
+
+
+
+
+
+
+.displayMenu{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 50;
+  background-color: rgba(0, 0, 0, 0.199);
+  backdrop-filter: blur(10px);
+  display: none;
+  place-items: center;
+
+}
+.displayMenuWrapper{
+  width: 90%;
+  max-width: 850px;
+  height: 60%;
+  min-height: 450px;
+  background-color: black;
+  position: relative;
+
+  padding: 25px 30px;
+  overflow: hidden;
+
+  display: flex;
+  gap: 50px;
+  border-radius: 10px;
+}
+.displayMenuWrapper img{
+  width: 100%;
+  max-width: 290px;
+  object-fit: contain;
+}
+.displayMenu button{
+  position: absolute;
+  top: -5px;
+  right: 15px;
+  color: rgba(156, 154, 154, 0.733);
+  cursor: pointer;
+  font-size: 40px;
+  font-weight: bold;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.74);;
+}
+
+
+.displayMenuText{
+  display: flex;
+  flex-direction: column;
+  padding: 15px 15px 15px 0;
+  gap: 15px;
+  max-width: 65%;
+}
+.displayMenuText .bold{
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+}
+.displayMenuText span, .displayMenuText p{
+  color: rgba(255, 255, 255, 0.74);
+}
+.displayMenuText h1{
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: bolder;
+  color: #CA9503;
+}
+.displayMenuText p{
+  max-height: max-content;
+  min-height: 15%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding: 0 15px 0 0;
+  font-size: 16px;
+}
+.displayMenuText i{
+  color: #CA9503;
+}
+.rated{
+  background-color: #CA9503;
+  padding: 5px 5px;
+  width: max-content;
+  border-radius: 2.5px;
+}
+.genre{
+  background-color: #232323;
+  width: max-content;
+  padding: 5px;
+  border-radius: 2.5px;
 }

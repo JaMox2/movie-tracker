@@ -129,9 +129,58 @@ body{
   display: flex;
   align-items: center;
   border-radius: 5px;
-  overflow: hidden;
   background-color: #303030;
   padding: 0 10px;
+  position: relative;
+  z-index: 14;
+}
+.showSearchedItems{
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  height: max-content;
+  min-height: max-content;
+  max-height: 420px;
+  left: 0;
+  top: 40px;
+  padding: 10px 5px 10px 5px;
+  z-index: 11;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #202020;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  display: none;
+}
+.ssItemsCard{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 5px;
+
+  cursor: pointer;
+
+}
+.ssItemsCard:hover{
+  background-color:#303030 ;
+}
+.ssItemsCard img{
+  max-width: 20%;
+  object-fit: cover;
+}
+.ssItemsCardText{
+  padding-right: 6px;
+}
+.ssItemsCardText h6{
+  font-size: 16px;
+}
+.ssItemsCardText span{
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.74);
+
 }
 .navSearch>input{
   border: none;
@@ -327,7 +376,7 @@ body{
   overflow-y: scroll;
   width: 95%;
 }
-.mcTopMoviesItemText button{
+.mcTopMoviesItemText a{
   background-color: black;
   border: 1px solid white;
   padding: 10px 20px;
@@ -335,7 +384,7 @@ body{
   color: white;
   cursor: pointer;
 }
-.mcTopMoviesItemText button:hover{
+.mcTopMoviesItemText a:hover{
   color: red;
   border: 1px solid red;
 }
@@ -350,6 +399,8 @@ body{
   transition: .35s ease;
   top: 0;
   min-height: 378px;
+  background-color: #0C0A07;
+
 
 }
 .swiper-slide:hover > .mcTopMoviesFront{
@@ -357,7 +408,7 @@ body{
   top: -100%;
 }
 .swiper-slide{
-  background-color: #0c0a07;;
+  background-color: #0C0A07;
 }
 .swiper-slide:hover > .mcTopMovesBack{
   opacity: 1;
@@ -367,8 +418,8 @@ body{
   position: absolute;
   left: -0px;
   background-color: black;
-  border-top-right-radius: 5px;
-  bottom: 0;
+  border-bottom-right-radius: 5px;
+  top: 0;
   font-size: 50px;
   -webkit-text-stroke: 2px white;
   -webkit-text-fill-color: transparent;
@@ -497,6 +548,16 @@ body{
   gap: 15px;
   max-width: 65%;
 }
+.displayMenuText>*{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.displayP{
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
 .displayMenuText .bold{
   font-weight: bold;
   font-size: 18px;
@@ -533,4 +594,38 @@ body{
   width: max-content;
   padding: 5px;
   border-radius: 2.5px;
+}
+
+
+
+
+
+
+
+.footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  padding: 35px 0;
+  gap: 10px;
+}
+.footer *{
+  color: white;
+  text-decoration: none;
+}
+.footer p i{
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+}
+.footer span span{
+  font-weight: bolder;
+  
+}
+.footer >span{
+  font-size: 20px;
+}
+.footer >span a:hover{
+  color: red;
 }

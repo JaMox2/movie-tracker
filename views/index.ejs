@@ -19,18 +19,18 @@
 
     <div class="contentWrapper">
 
-      <div class="displayMenu showMenuBtn">
+      <div class="displayMenu">
         <div class="displayMenuWrapper">
-          <button>x</button>
-          <img src="../public/assets/imgs/topShowImg1.jpg" alt="">
+          <button class="showMenuBtn">x</button>
+          <img class="imageText" src="../public/assets/imgs/topShowImg1.jpg" alt="">
           <div class="displayMenuText">
-            <h1>Indiana Jones and the Last Crusade</h1>
-            <span class="released"><span class="bold">Released:</span> 24 May 1989</span>
-            <span class="rated"><span class="bold">Rated:</span> PG-13</span>
-            <span class="genre"><span class="bold">Genre:</span> Action, Adventure</span>
-            <span class="director"><span class="bold">Director:</span> Steven Spielberg</span>
-            <span class="rating"><span class="bold">Rating:</span> 8.2/10 <i class="fa-solid fa-star"></i></span>
-            <p><span class="bold">Plot:</span> Jedi Master-in-hiding Luke Skywalker unwillingly attempts to guide young hopeful Rey in the ways of the force, while Leia, former princess turned general, attempts to lead what is left of the Resistance away from the ruthless tyrannical grip of the First Order.</p>
+            <h1 class="titleText">Indiana Jones and the Last Crusade</h1>
+            <span class="released"><span class="bold">Released:</span> <div class="releasedText">24 May 1989</div></span>
+            <span class="rated"><span class="bold">Rated:</span> <div class="ratedText">PG-13</div></span>
+            <span class="genre"><span class="bold">Genre:</span> <div class="genreText">Action, Adventure</div></span>
+            <span class="director"><span class="bold">Director:</span> <div class="directionText">Steven Spielberg</div></span>
+            <span class="rating"><span class="bold">Rating:</span> <div class="ratingText">8.2/10</div> <i class="fa-solid fa-star"></i></span>
+            <p class="displayP"><span class="bold">Plot:</span> <span class="plotText">Jedi Master-in-hiding Luke Skywalker unwillingly attempts to guide young hopeful Rey in the ways of the force, while Leia, former princess turned general, attempts to lead what is left of the Resistance away from the ruthless tyrannical grip of the First Order.</span></p>
           </div>
         </div>
       </div>
@@ -40,60 +40,71 @@
           <h1>Mo<span>vies</span></h1>
           <div class="navCtrls">
             <ul>
-              <a href="#"><li>Home</li></a>
-              <a href="#"><li>Movies</li></a>
-              <a href="#"><li>TV Shows</li></a>
-              <a href="#"><li>Contact</li></a>
+              <a href="#home"><li>Home</li></a>
+              <a href="#movies"><li>Movies</li></a>
+              <a href="#shows"><li>TV Shows</li></a>
+              <a href="#contacts"><li>Contact</li></a>
             </ul>
             <div class="navSearch">
-              <input type="text" placeholder="Name">
-              <button><i class="fa-solid fa-magnifying-glass"></i></button>
+              <input class="searchInput" type="text" placeholder="Search">
+              <button class="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+              <div class="showSearchedItems">
+                <!-- 
+                  <div class="ssItemsCard">
+                    <img src="../public/assets/imgs/topShowImg1.jpg" alt="">
+                    <div class="ssItemsCardText">
+                      <h6>Title</h6>
+                      <span>2004</span>
+                    </div>
+                  </div> 
+                -->
+              </div>
             </div>
           </div>
         </div>
       </nav>
 
-      <div class="header">
+      <div class="header" id="home">
         <div class="swiper headerSwiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <img src="../public/assets/imgs/moviecover.jpg" alt="">
               <div class="headerText">
-                <h1>Dark</h1>
-                <span>When two children go missing in a small German town, its sinful past is exposed along with the double lives and fractured relationships that exist among four families as they search for the kids </span>
-                <button>More Info</button>
+                <h1>SpongeBob Movie</h1>
+                <span>The SpongeBob SquarePants film series consists of American-made animated/live-action children's-comedies, based on and a continuation of the animated television series of the same name. The films are distributed by Paramount Pictures.</span>
+                <button class="readMore tt4823776">More Info</button>
               </div>
             </div>
             <div class="swiper-slide">
-              <img src="../public/assets/imgs/largeimg.webp" alt="">
+              <img src="../public/assets/imgs/moviecover4.jpg" alt="">
               <div class="headerText">
-                <h1>Title</h1>
-                <span>Desc</span>
-                <button>More Info</button>
+                <h1>Man of Steel</h1>
+                <span>Clark learns about the source of his abilities and his real home when he enters a Kryptonian ship in the Artic. However, an old enemy follows him to Earth in search of a codex and brings destruction.</span>
+                <button class="readMore tt0770828">More Info</button>
               </div>
             </div>
             <div class="swiper-slide">
               <img src="../public/assets/imgs/moviecover2.jpg" alt="">
               <div class="headerText">
-                <h1>Title</h1>
-                <span>Desc</span>
-                <button>More Info</button>
+                <h1>Avengers Endgame</h1>
+                <span>After Thanos, an intergalactic warlord, disintegrates half of the universe, the Avengers must reunite and assemble again to reinvigorate their trounced allies and restore balance.</span>
+                <button class="readMore tt4154796">More Info</button>
               </div>
             </div>
             <div class="swiper-slide">
               <img src="../public/assets/imgs/mociecover3.jpg" alt="">
               <div class="headerText">
-                <h1>Title</h1>
-                <span>Desc</span>
-                <button>More Info</button>
+                <h1>Avatar</h1>
+                <span>Jake, who is paraplegic, replaces his twin on the Na'vi inhabited Pandora for a corporate mission. After the natives accept him as one of their own, he must decide where his loyalties lie.</span>
+                <button class="readMore tt0499549">More Info</button>
               </div>
             </div>
             <div class="swiper-slide">
               <img src="../public/assets/imgs/moviecover5.webp" alt="">
               <div class="headerText">
-                <h1>Title</h1>
-                <span>Desc</span>
-                <button>More Info</button>
+                <h1>The Batman</h1>
+                <span>Batman is called to intervene when the mayor of Gotham City is murdered. Soon, his investigation leads him to uncover a web of corruption, linked to his own dark past.</span>
+                <button class="readMore tt1877830">More Info</button>
               </div>
             </div>
           </div>
@@ -102,7 +113,7 @@
 
       <section class="mainContent">
         <div class="mcTopMovies">
-          <h1 class="catTtitle">Top <span class="number">10</span> Trending Movies</h1>
+          <h1 class="catTtitle" id="movies">Top <span class="number">10</span> Trending Movies</h1>
           <div class="swiper mySwiper">
             <div class="swiper-wrapper">
               <% movies.forEach((x,i) => { %>
@@ -114,7 +125,7 @@
                   <div class="mcTopMovesBack mcTopMoviesItemText">
                     <span><%= x.Title %></span>
                     <p><%= x.MoreInfo.Plot %></p>
-                    <button class="readMore top" value="<%=x.Rank%>">Read More</button>
+                    <a class="readMore top <%=x.imdbID%>">Read More</a>
                   </div>
                 </div>
               <% }) %>
@@ -123,7 +134,7 @@
         </div>
 
         <div class="mcTopShows">
-          <h1 class="catTtitle">Trending <span>Shows</span></h1>
+          <h1 class="catTtitle" id="shows">Trending <span>Shows</span></h1>
           <div class="swiper mySwiper">
             <div class="swiper-wrapper">
 
@@ -135,7 +146,7 @@
                   <div class="mcTopMovesBack mcTopMoviesItemText">
                     <span><%= x.Title %></span>
                     <p><%= x.MoreInfo.Plot %></p>
-                    <button class="readMore bot" value="<%=x.Rank%>">Read More</button>
+                    <a class="readMore bot <%=x.imdbID%>">Read More</a>
                   </div>
                 </div>
               <% }) %>
@@ -144,6 +155,11 @@
           </div>
         </div>
       </section>
+
+      <footer class="footer" id="contacts">
+        <p><i class="fa-solid fa-magnifying-glass"></i> Click the search icon in the navigation and look up your favorite movie!</p>
+        <span><span>Created By</span> — <a href="https://github.com/JaMox2">Prince Jeffrey <i class="fa-brands fa-github"></i></a></span>
+      </footer>
 
     </div>
   </div>

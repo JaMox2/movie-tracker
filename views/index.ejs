@@ -118,9 +118,9 @@
             <div class="swiper-wrapper">
               <% movies.forEach((x,i) => { %>
                 <div class="swiper-slide">
+                  <span class="rank"><%= x.Rank %></span>
                   <div class="mcTopMoviesFront">
                     <img src="<%= x.Poster %>" alt="">
-                    <span class="rank"><%= x.Rank %></span>
                   </div>
                   <div class="mcTopMovesBack mcTopMoviesItemText">
                     <span><%= x.Title %></span>

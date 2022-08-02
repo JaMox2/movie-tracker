@@ -5,8 +5,35 @@ let mainBody = document.querySelector('body')
 
 
 var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 6,
+  slidesPerView: 1,
   spaceBetween: 10,
+  breakpoints: {
+
+    490: {
+        slidesPerView: 2,
+        spaceBetween: 25
+      },
+  
+    700: {
+        slidesPerView: 3,
+        spaceBetween: 15
+      },
+    // when window width is >= 440px
+    1025: {
+      slidesPerView: 4,
+      spaceBetween: 15
+    },
+    // when window width is >= 660px
+    1300: {
+      slidesPerView: 5,
+      spaceBetween: 15
+    },
+    // when window width is >= 100px
+    1600: {
+      slidesPerView: 6,
+      spaceBetween: 15
+    }
+  }
 
 })
 

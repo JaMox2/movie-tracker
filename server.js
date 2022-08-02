@@ -58,7 +58,6 @@ app.get('/', async (req, res)=>{
   }catch(err){
     console.log(err)
   }
-  // res.render('index.ejs', {movies: placeHolderItems})
 })
 app.post('/getInfo', async (req, res)=>{
   let reqBodyImdbId = req.body.imdbID
@@ -76,11 +75,7 @@ app.post('/search',async (req, res)=>{
   let movie = getSpecificItemInJsonMovie.Search || []
   let showsAndMovies = [...show, ...movie]
 
-  // console.log(showsAndMovies)
   res.json({msg: showsAndMovies})
-  // res.render('index.ejs', {
-  //   searched: 
-  // })
 })
 
 
